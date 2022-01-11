@@ -1,0 +1,15 @@
+nome = str(input("Qual é o seu nome? ")).strip()
+print("O seu nome com todas as letras maiusculas é {}".format(nome.upper()))
+print("Agora seu nome com todas as letras minusculas é {}".format(nome.lower()))
+nomes = nome.split()
+#print("o total de letras em {} é {}".format(nome,len(nome) - len(nome.split())+1))
+#quando são adicionados espaços extras dentro do nome o algoritmo dá um resultado errado
+print("----------------------teste-------------------")
+print("o total de letras em {} é {}".format(nome, len(nome) - nome.count(" ")))
+print("----------------------teste-------------------")
+
+print("o total de letras no primeiro nome é de {}".format(len(nomes[0])))
+print("-------------------------------")
+print(len(nome))
+#teste = nome.()
+#print(len(teste))

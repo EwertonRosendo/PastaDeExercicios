@@ -1,0 +1,5 @@
+#nome = input("informe algum nome completo").strip( )
+#duvida = bool(nome.count("silva") == 1)
+#print("o nome {} contem silva? {}".format(nome, duvida))
+nome = str(input("informe seu nome completo: "))
+print("existe o nome Silva dentro do {}? {}".format(nome, "silva".upper() in nome.upper()))

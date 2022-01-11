@@ -1,0 +1,6 @@
+cidade = str(input("informe o nome de uma cidade")).strip()
+#print(cidade.count("santo"))
+print("A cidade {} começa com santo um total de {} vezes, seu noia".format(cidade, cidade.count("santo")))
+print("dividindo o nome da cidade ela fica {}".format(cidade.split()))
+duvida = bool(cidade.split()[0].lower().upper() == "santo".lower().upper())
+print("a cidade {} começa com santo? {} ".format(cidade, duvida))

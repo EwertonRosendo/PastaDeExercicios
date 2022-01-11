@@ -1,0 +1,7 @@
+algo = input("digite algo ")
+print(" está em letras maiusculas? ",algo.isupper())
+print("está em letras pequenas",algo.islower())
+print("é um titulo?", algo.istitle())
+print("é alfanumerico? ",algo.isalpha())
+print("é letra? (alpha)",algo.isalpha())
+print("é um valor decimal? ",algo.isdecimal())
