@@ -1,7 +1,7 @@
 n1 = int(input("Informe um valor: "))
 n2 = int(input("Informe outro valor: "))
 x = 6
-while x != 5:
+while True:
     print("[1] Somar")
     print("[2] Multiplicar")
     print("[3] Maior")
@@ -22,6 +22,8 @@ while x != 5:
     elif x == 4:
         n1 = int(input("Informe um novo valor: "))
         n2 = int(input("Informe um outro novo valor: "))
+    elif x == 5:
+        break
     else:
         print("Informe um valor valido ")
 print("-----FIM-----")
