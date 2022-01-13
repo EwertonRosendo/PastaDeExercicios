@@ -1,30 +1,31 @@
+#Escolhendo entre PAR ou IMPAR
 import random
-print("{}{}{}".format("-"*10, "INICIO", "-"*10))
-duvida = str(input("Deseja par ou impar? [PAR/IMPAR]")).upper().strip()
-numpc = 0
-num = -1
-numdeacertos = 0
-while duvida not in "PAR IMPAR":
-    duvida = str(input("Informe se você deseja par ou impar, por favor[PAR/IMPAR]")).upper().strip()
-    if duvida == "PAR":
-        duvidapc = "IMPAR"
+vitorias = 0
+verde = "\033[32m"
+vermelho = "\033[31m"
+amarelo = "\033[33m"
+fim = "\033[m"
+while True:
+    print("-"*30)
+    escolha = int(input(f"{amarelo}Impar[1] ou Par[2]?{fim}"))
+    # Validando a escolha entre PAR e IMPAR
+    while escolha != 1 and escolha != 2:
+        escolha = int(input(f"{amarelo}Porfavor, escolha [1] para IMPAR ou [2] para PAR: {fim}"))
+    if escolha == 1:
+        escolhapc = 2
+    # Validando um numero entre 0 e 10
+    pessoanum = int(input(f"{amarelo}Informe um numero numero entre 0 e 10: {fim}"))
+    while pessoanum < 0 or pessoanum > 10:
+        pessoanum = int(input(f"{amarelo}Porfavor, informe um numero entre 0 e 10: {fim}"))
+    pcnum = random.randint(0, 10)
+    # Validando a vitoria
+    if ((pessoanum + pcnum) % 2) == 0 and escolha == 2:
+        vitorias += 1
+        print(f"{verde}Você escolheu Par e {pessoanum} + {pcnum} é {pessoanum+pcnum} que é PAR e você acertou{fim}")
+    elif ((pessoanum + pcnum) % 2) != 0 and escolha == 1:
+        vitorias += 1
+        print(f"{verde}Você escolheu Impar e {pessoanum} + {pcnum} é {pessoanum+pcnum} que é IMPAR e você acertou{fim}")
     else:
-        duvidapc = "PAR"
-    num = int(input("Informe um numero entre 0 e 10: "))
-    if 0 > num > 10:
-        num = int(input("Insira um numero valido entre 0 e 10: "))
-    else:
-        numpc = random.randint(0, 10)
-        if ((num + numpc) % 2) == 0 and duvida == "PAR":
-            print("\033[33mVocê acertou\033[m")
-            numdeacertos += 1
-        elif ((num + numpc) % 2) != 0 and duvida == "IMPAR":
-            print("\033[33mVocê acertou\033[m")
-            numdeacertos += 1
-        else:
-            print("\033[31mVocê errou")
-            break
-print(f"Você ganhou da maquina {numdeacertos} vezes")
-
-
-
+        print(f"{vermelho}Você errou, {pessoanum} + {pcnum} = {pessoanum+pcnum}{fim}")
+        break
+print("\033[34mVocê fez um total de {} vitorias consecutivas contra o pc".format(vitorias))
