@@ -1,5 +1,5 @@
 #Escolhendo entre PAR ou IMPAR
-import random
+from random import randint
 vitorias = 0
 verde = "\033[32m"
 vermelho = "\033[31m"
@@ -17,7 +17,7 @@ while True:
     pessoanum = int(input(f"{amarelo}Informe um numero numero entre 0 e 10: {fim}"))
     while pessoanum < 0 or pessoanum > 10:
         pessoanum = int(input(f"{amarelo}Porfavor, informe um numero entre 0 e 10: {fim}"))
-    pcnum = random.randint(0, 10)
+    pcnum = randint(0, 10)
     # Validando a vitoria
     if ((pessoanum + pcnum) % 2) == 0 and escolha == 2:
         vitorias += 1
