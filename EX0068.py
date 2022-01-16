@@ -7,22 +7,24 @@ amarelo = "\033[33m"
 fim = "\033[m"
 while True:
     print("-"*30)
-    escolha = int(input(f"{amarelo}Impar[1] ou Par[2]?{fim}"))
+    escolha = str(input(f"{amarelo}Impar ou Par?{fim}")).upper().strip()
     # Validando a escolha entre PAR e IMPAR
-    while escolha != 1 and escolha != 2:
-        escolha = int(input(f"{amarelo}Porfavor, escolha [1] para IMPAR ou [2] para PAR: {fim}"))
-    if escolha == 1:
-        escolhapc = 2
+    while escolha != "IMPAR" and escolha != "PAR":
+        escolha = str(input(f"{amarelo}Porfavor, escolha IMPAR ou PAR: {fim}")).upper().strip()
+    if escolha == "PAR":
+        escolhapc = "IMPAR"
+    elif escolha == "IMPAR":
+        escolhapc = "PAR"
     # Validando um numero entre 0 e 10
     pessoanum = int(input(f"{amarelo}Informe um numero numero entre 0 e 10: {fim}"))
     while pessoanum < 0 or pessoanum > 10:
         pessoanum = int(input(f"{amarelo}Porfavor, informe um numero entre 0 e 10: {fim}"))
     pcnum = randint(0, 10)
     # Validando a vitoria
-    if ((pessoanum + pcnum) % 2) == 0 and escolha == 2:
+    if ((pessoanum + pcnum) % 2) == 0 and escolha == "PAR":
         vitorias += 1
         print(f"{verde}Você escolheu Par e {pessoanum} + {pcnum} é {pessoanum+pcnum} que é PAR e você acertou{fim}")
-    elif ((pessoanum + pcnum) % 2) != 0 and escolha == 1:
+    elif ((pessoanum + pcnum) % 2) != 0 and escolha == "IMPAR":
         vitorias += 1
         print(f"{verde}Você escolheu Impar e {pessoanum} + {pcnum} é {pessoanum+pcnum} que é IMPAR e você acertou{fim}")
     else:
