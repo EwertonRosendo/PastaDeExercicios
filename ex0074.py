@@ -1,0 +1,10 @@
+from random import randint
+num1 = randint(0, 10)
+num2 = randint(0, 10)
+num3 = randint(0, 10)
+num4 = randint(0, 10)
+num5 = randint(0, 10)
+listagem = (num5, num4, num3, num2, num1)
+organizado = sorted(listagem)
+print(organizado)
+print(f"o menor valor é {organizado[0]} e o maior valor é {organizado[4]}")
