@@ -6,7 +6,7 @@ i = "i"
 o = "o"
 u = "u"
 while len(palavras) != c:
-    print("Na palavra {} temos ".format(palavras[c]), end=" ")
+    print("Na palavra {} temos ".format(palavras[c]).lower(), end=" ")
     if a in palavras[c]:
         print("a", end=" ")
     if e in palavras[c]:
