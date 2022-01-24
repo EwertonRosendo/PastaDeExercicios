@@ -1,4 +1,6 @@
-palavras = ("aprender", "programar", "linguagem", "python", "python", "curso", "gratis", "estudar", "praticar", "trabalhar", "mercado", "programador", "futuro",)
+palavras = ("aprender", "programar", "linguagem", "python",
+            "python", "curso", "gratis", "estudar", "praticar",
+            "trabalhar", "mercado", "programador", "futuro",)
 c = 0
 a = "a"
 e = "e"
