@@ -42,10 +42,50 @@ while True:
             else:
                 print("Insira um valor valido entre 1 e 5")
     elif c == 2:
-        print("[1] Função afim")
-        print("[2] Função do segundo grau")
-        print("[2] Função exponencial")
-        c = int(input())
+        while True:
+            print("[1] Função afim")
+            print("[2] Função do segundo grau")
+            print("[3] Função exponencial")
+            print("[4] Sair")
+            c = int(input())
+
+            if c == 1:
+                # Função afim
+                print("O que você deseja saber da função afim?")
+                print("[1] Saber o Y\n[2] Saber o X\n[3] Saber o coeficiente angular\n[4] Saber o coeficiente Linear")
+                c = int(input())
+                if c == 1:
+                    funafim = [int(input("Informe X: ")), int(input("Informe o coeficiente angular")), int(input("Informe o coeficiente linear: "))]
+                    y = ((funafim[0]*funafim[1]) + funafim[2])
+                    print("O valor de Y é {}".format(y))
+                elif c == 2:
+                    funafim = [int(input("Informe o Y: ")), int(input("Informe o coeficiente angular: ")), int(input("Informe o coeficiente linear: "))]
+                    # f(x) = ax + b
+                    x = ((funafim[0] - funafim[2]) / funafim[1])
+                    print("O Valor de x é {}".format(x))
+                elif c == 3:
+                    funafim = [int(input("Informe o Y: ")), int(input("Informe o X: ")), int(input("Informe o coeficiente linear: "))]
+                    coeficienteangular = ((funafim[0] - funafim[2]) / funafim[1])
+                    print("O valor do coeficiente angular é: {}".format(coeficienteangular))
+                elif c == 4:
+                    funafim = [int(input("Informe o Y: ")), int(input("Informe o X: ")), int(input("Informe o coeficiente angular: "))]
+                    coeficientelinear = (funafim[0] / (- funafim[1]*funafim[2]))
+                    print(f"O valor do coeficiente linear é: {coeficientelinear}")
+
+            elif c == 2:
+                # Função do Segundo Grau
+                funsegun = [int(input("Informe o A: ")), int(input("Informe o B: ")), int(input("Informe o C: "))]
+                delta = pow((pow(funsegun[1], 2) - (4*funsegun[0]*funsegun[2])), 1/2)
+                print(f"O valor do delta é {delta}")
+                duasraizes = (((-funsegun[1] + delta) / (2*funsegun[0])), ((-funsegun[1] - delta) / (2*funsegun[0])))
+                print(f"O valor de x1 é {duasraizes[0]}\nO valor de x2 é {duasraizes[1]}")
+            elif c == 3:
+                # Função exponencial
+                funafimexpo = []
+                print("Novidades em breve")
+                break
+            elif c == 4:
+                break
     # Progressão aritmetica
 
     elif c == 3:
