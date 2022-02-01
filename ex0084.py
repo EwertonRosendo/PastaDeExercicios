@@ -4,6 +4,7 @@ dados = list()
 qtd_pessoas = 0
 soma_de_peso = 0
 soma_de_pessoas = 0
+c = 0
 # Variaveis de teste
 nomes = ["Rosendo", "Rosa", "irineu", "davi", "caua", "erick"]
 # Importando bibliotecas de teste
@@ -22,10 +23,13 @@ while True:
     if duvida in "N NÃO NOA NAO":
         break
 print("A media de peso é: {:.2f}".format(soma_de_peso/soma_de_pessoas))
+print(f"O total de pessoas cadastradas foram {soma_de_pessoas}")
 # Laço para mostrar as pessoas acima e abaixo do peso
 for p in dados:
-    if p[1] > (soma_de_peso/soma_de_pessoas):
+    if p[1] > dados[c][1]:
         print("{} está acima da media de peso com {}kg".format(p[0], p[1]))
-    elif p[1] < (soma_de_peso/soma_de_pessoas):
+        c += 1
+    elif p[1] < dados[c][1]:
         print(f"{p[0]} está abaixo da media de peso com {p[1]}kg")
-print(f"O total de pessoas cadastradas foram {soma_de_pessoas}")
+        c += 1
+print(dados)
