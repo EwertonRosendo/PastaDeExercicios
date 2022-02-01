@@ -17,6 +17,7 @@ pessoas = list()
 for c in range(0, 2):
     individuo.append(str(input("Informe um nome: "))), individuo.append(int(input("Informe sua idade")))
     pessoas.append(individuo[:])
-    del individuo[:]
+    #del individuo[:] é uma opção
+    individuo.clear() # Limpa os dados da lista, diferente da estrutura del que os apaga
 for p in pessoas:
     print(f"A pessoa {p[0]} tem {p[1]} anos")
