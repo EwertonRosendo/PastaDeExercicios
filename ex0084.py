@@ -7,11 +7,11 @@ soma_de_pessoas = 0
 # Variaveis de teste
 nomes = ["Rosendo", "Rosa", "irineu", "davi", "caua", "erick"]
 # Importando bibliotecas de teste
-import random
+from random import choice, randint
 # Laço infinito para colocar pessoas numa lista
 while True:
     #nome_e_peso.append(str(input("Informe o nome: "))), nome_e_peso.append(int(input("Informe o peso")))
-    nome_e_peso.append(random.choice(nomes)), nome_e_peso.append(random.randint(60, 120))
+    nome_e_peso.append(choice(nomes)), nome_e_peso.append(randint(60, 120))
     dados.append(nome_e_peso[:]) # Copia da lista nome_e_peso para a lista de dados
     soma_de_peso += nome_e_peso[1]# Soma do peso de todas as pessoas cadastradas
     soma_de_pessoas += 1# soma do numero de pessoas cadastradas
