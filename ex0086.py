@@ -1,23 +1,19 @@
-from random import randint
-num = []
-matrix = []
-matrix2 = []
-matrix3 = []
-matriz_real = []
-p = 0
-p1 = 0
+n = []
+matriz = []
+linha = 1
+coluna = 1
 for c in range(0, 9):
-    num.append(randint(0, 100))
-    if c < 3:
-        matrix.append(num[:])
-        num.clear()
-    elif 3 < c < 7:
-        matrix2.append(num[:])
-        num.clear()
-    else:
-        matrix3.append(num[:])
-        num.clear()
-print(f"{matrix}\n{matrix2}\n{matrix3}")
-'''print(matrix, end="\n")
-print(matrix2, end="\n")
-print(matrix3, end="\n")'''
+    n.append(int(input(f"Informeu numero para a poseção {linha}, {coluna}")))
+    matriz.append(n[:])
+    n.clear()
+    coluna += 1
+    if len(matriz) == 3:
+        linha = 2
+        coluna = 1
+    elif len(matriz) == 6:
+        linha = 3
+        coluna = 1
+for num in matriz:
+    print(num, end=" ")
+    if matriz.index(num) == 2 or matriz.index(num) == 5:
+        print(end="\n")
