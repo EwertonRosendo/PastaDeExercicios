@@ -1,7 +1,3 @@
-
-filme = {
-    "titulo": "Star Wars",
-    "ano": "1977",
-    "diretor": "George Lucas"
-        }
-print(filme.items())
+pessoas = {"nome": "gustavo", "sexo": "M", "idade": "22"}
+for k, v in pessoas.items():
+    print(k, v)
