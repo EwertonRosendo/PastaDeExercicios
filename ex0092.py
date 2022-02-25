@@ -9,4 +9,5 @@ if pessoa["carteira_tb"] != 0:
     pessoa["salario"] = float(input("Salario: "))
     pessoa["ano_de_aposentar"] = pessoa["ano_de_contratação"]+35
     pessoa["idade_aposentar"] = (pessoa["ano_de_contratação"] + 35) - (pessoa["ano_de_contratação"]- pessoa["idade"])
-print(pessoa["idade_aposentar"])
+for k, v in pessoa.items():
+    print(f"{k} tem valor: {v}")
