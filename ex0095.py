@@ -29,5 +29,8 @@ for cod, j in enumerate(lista_de_jogadores):
     print(f"{cod} ---- {j}")
 while True:
     contador = int(input("Mostrar dados de qual jogador? "))
-    for k in lista_de_jogadores[contador][0]['gols marcados']:
-        print(f"No jogo {enumerate(k)} fez {k} gols")
+    while contador > (len(lista_de_jogadores)-1) or contador < 0:
+        contador = int(input("Informe um valor válido: "))
+    for p, g in enumerate(lista_de_jogadores[contador][0]['gols marcados']):
+        print("No jogo {} fez {} gols".format(p, g))
+    #print(lista_de_jogadores[contador][0]['gols marcados'])
