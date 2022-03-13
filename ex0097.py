@@ -1,13 +1,9 @@
-def escreva(txt):
-    print("-"*len(txt))
-    print(txt)
-    print("-"*len(txt))
+def escreva(texto):
+    print("~"*len(texto))
+    print(texto)
+    print("~"*len(texto))
 
-    
-while True:
-    escreva(str(input()))
-    continuar = str(input("Continuar[S/N]")).upper
-    while continuar not in "N S":
-        continuar = str(input("Informe um valor valido! [S/N]")).upper
-    if continuar in "N":
-        break
+
+escreva("Gustavo Guanabara")
+escreva("Curso de Python no Youtube")
+escreva("Cev")
