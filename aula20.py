@@ -1,4 +1,4 @@
 def contador(* num):
-    sum(num)
-    print(f"A soma de todos os valores é: {sum}")
+    print(f"A soma d0e todos os valores é: {sum(num)}")
 contador(2, 2, 2, 2, 2)
+contador (2, 2, 2)
