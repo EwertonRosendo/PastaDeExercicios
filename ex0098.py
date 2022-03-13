@@ -44,32 +44,32 @@ def contador(inicio, fim, passo):
         print()
 
     # Fim > inicio e passo == 0
-    if fim > inicio and passo == 0:
+    elif fim > inicio and passo == 0:
         for c in range(inicio, fim+1, 1):
             print(c, end=" ")
             sleep(0.2)
         print()
 
     #  Inicio > Fim e Passo > 0    
-    if inicio > fim and passo > 0:
-        for c in range(fim, inicio, -1*passo):
+    elif inicio > fim and passo > 0:
+        for c in range(inicio, fim-1, -1*passo):
+            print(c, end=" ")
+            sleep(0.2)
+        print()
+
+    #  Inicio > Fim e passo < 0
+    elif inicio > fim and passo < 0:
+        for c in range(inicio, fim-1, passo):    
+            print(c, end=" ")
+            sleep(0.2)
+        print()
+
+    # Inicio > Fim e passo == 0
+    elif inicio > fim and passo == 0:
+        for c in range(inicio, fim-1, -1):
             print(c, end=" ")
             sleep(0.2)
         print()
     print("~"*30)
-
-    #  Inicio > Fim e passo < 0
-    if inicio > fim and passo < 0:
-        for c in range(fim, inicio, passo):    
-            print(c, end=" ")
-            sleep(0.2)
-        print()
-        
-    # Inicio > Fim e passo == 0
-    if inicio > fim and passo == 0:
-        for c in range(fim, inicio, -1):
-            print(c, end=" ")
-            sleep(0.2)
-        print()
 #  Chamando contador personalizado
 contador(inicio=int(input("Inicio: ")), fim=int(input("FIM: ")), passo=int(input("Passo: ")))
