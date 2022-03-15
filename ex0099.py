@@ -1,4 +1,4 @@
-from time import sleep
+#  Definindo  a função para descobrir o maior numero
 
 
 def maior(listagem):
@@ -9,8 +9,15 @@ def maior(listagem):
             maior_num = c
     print(f"O maior numero é {maior_num}")
 
-    
+#  Criando a lista que será usada como parametro
+
+
 listaDeNumeros = []
+
+
+#  Laço infinito para adicionar numeros a lista
+
+
 while True:
     listaDeNumeros.append(int(input("Informe um numero: ")))
     continuar = str(input("Deseja continuar? [S/N] ")).strip().upper()
@@ -18,4 +25,7 @@ while True:
         continuar = str(input("Informe um valor valido, CONTINUAR OU NÃO [S/N] ")).strip().upper()
     if continuar in "N NÃO NAO":
         break
+
+
+#  Chamando a função maior 
 maior(listaDeNumeros)
