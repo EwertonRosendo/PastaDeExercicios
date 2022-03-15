@@ -1,15 +1,21 @@
-def maior(* lista):
-    for c in lista:
-        if lista.index(c) == 0:
-            maior_num = lista[c]
-        elif lista[c] > maior_num:
-            maior_num = lista[c]
-    print(f"O maior numero da lista é {maior_num}")
+from time import sleep
 
 
+def maior(listagem):
+    for c in listagem:
+        if listagem.index(c) == 0:
+            maior_num = c
+        elif c > maior_num:
+            maior_num = c
+    print(f"O maior numero é {maior_num}")
+
+    
+listaDeNumeros = []
 while True:
-    lista_de_numeros = list()
-    lista_de_numeros.append(int(input("Informe um numero: ")))
-    continuar = str(input("Deseja continuar? [S/N]"))
-    if continuar in "N NAO NÃO":
+    listaDeNumeros.append(int(input("Informe um numero: ")))
+    continuar = str(input("Deseja continuar? [S/N] ")).strip().upper()
+    while continuar not in "S N NAO SIM NÃO":
+        continuar = str(input("Informe um valor valido, CONTINUAR OU NÃO [S/N] ")).strip().upper()
+    if continuar in "N NÃO NAO":
         break
+maior(listaDeNumeros)
