@@ -1,6 +1,6 @@
 def escreva(texto):
     print("~"*len(texto))
-    print(texto)
+    print(F"  texto")
     print("~"*len(texto))
 
 
