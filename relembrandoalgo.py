@@ -5,15 +5,15 @@ while True:
     # Informando usuario e senha num dicionario
     nome_senha["usuario"] = str(input("Informe seu usuario: "))
     nome_senha["senha"] = str(input("Informe sua senha: "))
-    
+
     # A lista pessoa está recebendo um cadastro
-    pessoa.append(nome_senha.copy)
+    pessoa.append(nome_senha.copy())
 
     # A pessoa cadastrada está sendo passada ao banco de dados
     cadastros.append(pessoa[:])
 
     # Limpando as variaveis iniciais para utilizar novamente
-    nome_senha.clear, pessoa.clear
+    nome_senha.clear(), pessoa.clear()
 
     # Exibindo todos os cadastros
     print(cadastros)
