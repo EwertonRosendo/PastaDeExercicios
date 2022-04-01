@@ -3,12 +3,6 @@ listaDeCadastros = list()
 pessoaCadastrada = dict()
 listaDePessoa = list()
 
-# Criando testes automaticos
-emailBeta = ("ewerton@gmal", "joabe@gmal", "erica@gmal", "karlao@gmal", "manu@gmal", "davi@gmal", "erick@gmal", "caua@gmal")
-usernamesBeta = ("geragera", "araçoiabei", "hellcife", "nassauloco", "seloquinha", "bawzinho123", "minecloucooo", "dragonfodase")
-senhasBeta = ("2535325353", "23534523523", "52532523452", "325424525234", "435342523543", "34523523531", "34542352354")
-
-
 # cadastro
 
 def cadastrar():
@@ -21,7 +15,14 @@ def cadastrar():
     pessoaCadastrada["senha"] = str(input("Senha: "))
 
     '''
+    # Criando testes automaticos
+    # INICIO
 
+    emailBeta = ("ewerton@gmal", "joabe@gmal", "erica@gmal", "karlao@gmal", "manu@gmal", "davi@gmal", "erick@gmal", "caua@gmal")
+    usernamesBeta = ("geragera", "araçoiabei", "hellcife", "nassauloco", "seloquinha", "bawzinho123", "minecloucooo", "dragonfodase")
+    senhasBeta = ("2535325353", "23534523523", "52532523452", "325424525234", "435342523543", "34523523531", "34542352354")
+
+    # FIM
     pessoaCadastrada["email"] = emailBeta[random.randint(0, 7)]
     pessoaCadastrada["username"] = usernamesBeta[random.randint(0,  4)]
     pessoaCadastrada["senha"] = random.choice(senhasBeta)
@@ -50,6 +51,18 @@ def pesquisar():
 # Editar
 
 # Apagar
+def deletar():
+    usuario = str(input("Informe o usuario a ser deletado: "))
+    for individuo in listaDeCadastros:
+        if individuo[0]['username'] == usuario:
+            del individuo[0]
+    print(listaDeCadastros)
+
+
+
+
+
+
 while True:
     print("[1] - Cadastrar")
     print("[2] - Pesquisar")
@@ -62,8 +75,12 @@ while True:
 
     if escolha == 1:
         cadastrar()
+
     if escolha == 2:
         pesquisar()
+
+    if escolha == 4:
+        deletar()
 
     if escolha == 0:
         break
