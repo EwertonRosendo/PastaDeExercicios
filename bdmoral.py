@@ -19,6 +19,7 @@ def cadastrar():
     pessoaCadastrada["email"] = str(input("Email: ")).lower()
     pessoaCadastrada["username"] = str(input("Usuario: ")).lower()
     pessoaCadastrada["senha"] = str(input("Senha: "))
+
     '''
 
     pessoaCadastrada["email"] = emailBeta[random.randint(0, 7)]
