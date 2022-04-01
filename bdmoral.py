@@ -32,6 +32,7 @@ def cadastrar():
     print(listaDeCadastros)
     print("~" * 30)
 
+
 # Pesquisar
 # [['email': 'email', 'username': 'meunomenojogo', 'senha':'minha senha'], ['email2': 'email2', 'username2': 'meunomenojogo2', 'senha2':'minha senha2']]
 def pesquisar():
@@ -44,6 +45,8 @@ def pesquisar():
         print("\033[32mUsuario encontrado!\033[m")
     else:
         print("\033[31mUsuario não encontrado\033[m")
+
+
 # Editar
 
 # Apagar
