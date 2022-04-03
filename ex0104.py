@@ -21,9 +21,9 @@ print(f"Você digitou {n}")
 def leiaInt(num):
     n = str(num)
     if n.isnumeric():
-        print("É UM VALOR NUMERICO")
+        return "É UM VALOR NUMERICO"
     else:
-        print("NÃO É UM VALOR NUMERICO")
+        return "NÃO É UM VALOR NUMERICO"
 
-leiaInt(input("Digite um numero: "))
+print(leiaInt(input("Digite um numero: ")))
 
