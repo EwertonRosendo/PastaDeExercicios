@@ -1,4 +1,4 @@
-def fatorial(numero=1, show=bool):
+def fatorial(numero=1, show=False):
     resul = 1
     if show == True:
         for c in range(numero, 0, -1):
@@ -14,4 +14,4 @@ def fatorial(numero=1, show=bool):
         print(f"O fatorial de {numero} é {resul}")
 
 
-fatorial(4, False)
+fatorial(4, show=True)
