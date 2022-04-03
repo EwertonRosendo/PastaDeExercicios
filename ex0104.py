@@ -1,3 +1,4 @@
+'''
 def leiaInt(msg):
     valor = 0
     ok = False
@@ -16,3 +17,13 @@ def leiaInt(msg):
 
 n = leiaInt("Digite um numero: ")
 print(f"Você digitou {n}")
+'''
+def leiaInt(num):
+    n = str(num)
+    if n.isnumeric():
+        print("É UM VALOR NUMERICO")
+    else:
+        print("NÃO É UM VALOR NUMERICO")
+
+leiaInt(input("Digite um numero: "))
+
