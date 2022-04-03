@@ -10,4 +10,4 @@ def voto(nascimento):
     else:
         return "Você tem direito a voto opcional"
 
-voto(int(input("Seu ano de nascimento? ")))
+print(voto(int(input("Seu ano de nascimento? "))))
