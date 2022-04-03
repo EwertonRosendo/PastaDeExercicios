@@ -1,9 +1,11 @@
-jogador = dict()
+
 
 def ficha(nomeJogador="<DESCONHECIDO>", qtdGols="<NAO INFORMADO>"):
-    jogador["nome"] = nomeJogador
-    jogador["gols"] = qtdGols
+    if qtdGols.isnumeric():
+        int(qtdGols)
+    else:
+        qtdGols = 0
 
     print(f"{'~'*15}FICHA{'~'*15}")
-    return f"Nome do JOGADOR     - [{jogador['nome']}]\nQuantidade de gols  - [{jogador['gols']}]"
+    return f"Nome do JOGADOR     - [{nomeJogador}]\nQuantidade de gols  - [{qtdGols}]"
 print(ficha(nomeJogador=str(input("Nome do jogador: ")), qtdGols=str(input("Quantidade de gols: "))))
