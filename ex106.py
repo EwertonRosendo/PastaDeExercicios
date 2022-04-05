@@ -1,6 +1,6 @@
 def ajuda():
     while True:
-        comandoPesquisar = str(input("Digite um comando ou [FIM]: ")).lower().strip()
+        comandoPesquisar = str(input("Função ou Biblioteca > ")).lower().strip()
         if comandoPesquisar in "fim":
             break
 
