@@ -31,11 +31,15 @@ def leiaInt(msg):
 
 def leiaFoat(msg):
     global y
+    global teste
     validadorReal = False
 
     while True:
         try:
-            y = float(input(msg))
+            teste = (input(msg))
+            y = float(teste.replace(",", "."))
+
+            print(f"O valor de y é {y} ")
 
         except Exception as causa:
             print(f"A causa do erro foi {causa.__class__}")
