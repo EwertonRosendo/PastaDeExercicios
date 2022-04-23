@@ -4,8 +4,8 @@ def cadastrar(cadastros):
     while True:
         try:
             nomeEIdade.clear()
-            nomeEIdade["nome"] = str(input("Infome o nome: ")).strip()
-            nomeEIdade["idade"] = int(input("Informe a idade: "))
+            nomeEIdade["Nome"] = str(input("Infome o nome: ")).strip()
+            nomeEIdade["Idade"] = int(input("Informe a idade: "))
 
         except ValueError:
             print("\033[31mERRO: Informe um numero inteiro!\033[m")
@@ -22,7 +22,7 @@ def cadastrar(cadastros):
 
 def mostrarLista(lista):
     for pessoacadastrada in lista:
-        print(pessoacadastrada)
         for i, v in pessoacadastrada[0].items():
-            print(f"[{i}] com [{v}]")
+            print(f"[{i}] com [{v}]", end=" ")
+        print()
 
