@@ -1,4 +1,3 @@
-
 def cadastrar(cadastros):
     nomeEIdade = dict()
     listaIndividuo = list()
@@ -21,5 +20,9 @@ def cadastrar(cadastros):
     print(cadastros)
 
 
-def mostrarLista(*lista):
-    print(lista)
+def mostrarLista(lista):
+    for pessoacadastrada in lista:
+        print(pessoacadastrada)
+        for i, v in pessoacadastrada[0].items():
+            print(f"[{i}] com [{v}]")
+

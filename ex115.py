@@ -11,7 +11,7 @@ while True:
         opcao = int(input("\033[33mSua opção: \033[m"))
 
         if opcao == 1:
-            pacoteAula115.cadastrar(cadastros)
+            pacoteAula115.mostrarLista(cadastros)
         elif opcao == 2:
             pacoteAula115.cadastrar(cadastros)
         elif opcao == 3:
