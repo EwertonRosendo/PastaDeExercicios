@@ -27,6 +27,5 @@ while True:
 
 
 
-
 # Fim da aplicação
 print("Fim")
