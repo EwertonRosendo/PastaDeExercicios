@@ -1,6 +1,4 @@
 import pacoteAula115
-nome_e_idade = dict()
-listaIndividual = list()
 cadastros = list()
 while True:
     try:
@@ -13,9 +11,9 @@ while True:
         opcao = int(input("\033[33mSua opção: \033[m"))
 
         if opcao == 1:
-            pacoteAula115.cadastrar(nome_e_idade, listaIndividual, cadastros)
+            pacoteAula115.cadastrar(cadastros)
         elif opcao == 2:
-            pacoteAula115.cadastrar()
+            pacoteAula115.cadastrar(cadastros)
         elif opcao == 3:
             break
         else:
