@@ -1,7 +1,7 @@
-individuo = dict()
-individuoLista = list()
-listaDeCadastro = list()
-def cadastrar(nomeEIdade, listaIndividuo, cadastros):
+
+def cadastrar(cadastros):
+    nomeEIdade = dict()
+    listaIndividuo = list()
     while True:
         try:
             nomeEIdade.clear()
@@ -15,12 +15,11 @@ def cadastrar(nomeEIdade, listaIndividuo, cadastros):
             print("\033[31mERRO: O Usuario preferiu não informar a idade!\033[m")
 
         else:
-            listaIndividuo.append(individuo.copy())
-            cadastros.append(individuoLista[:])
-            listaIndividuo.clear()
-            nomeEIdade.clear()
+            listaIndividuo.append(nomeEIdade.copy())
+            cadastros.append(listaIndividuo[:])
             break
     print(cadastros)
+
 
 def mostrarLista(*lista):
     print(lista)
