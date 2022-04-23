@@ -9,8 +9,11 @@ def leiaInt(msg):
         # except ValueError:
         # print("O valor do tipo inteiro não foi atendido!")
 
-        except Exception as causa:
-            print(f"O valor  não é do tipo inteiro, e foi retornado o erro {causa.__class__}")
+        #except Exception as causa:
+            #print(f"O valor  não é do tipo inteiro, e foi retornado o erro {causa.__class__}")
+
+        except ValueError:
+            print("Informe um valor inteiro valido")
 
         except KeyboardInterrupt:
 
