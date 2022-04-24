@@ -1,5 +1,17 @@
 import pacoteAula115
+from pacoteAula115.arquivos import *
 cadastros = list()
+arq = "CursoEmVideo.txt"
+
+
+if arquivoExiste(arq):
+    print("\033[32mArquivo encontrado\033[m")
+
+else:
+    print("\033[31mArquivo não encontrado\033[m")
+    criarArquivo(arq)
+
+
 while True:
     try:
 
@@ -14,7 +26,7 @@ while True:
 
         if opcao == 1:
             print(f"{'-' * 40}\n{' ' * 16}OPÇÃO 1\n{'-' * 40}")
-            pacoteAula115.mostrarLista(cadastros)
+            lerArquivo(arq)
         elif opcao == 2:
             print(f"{'-' * 40}\n{' ' * 16}OPÇÃO 2\n{'-' * 40}")
             pacoteAula115.cadastrar(cadastros)
