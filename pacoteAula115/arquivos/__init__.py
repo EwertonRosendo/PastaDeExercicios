@@ -31,3 +31,4 @@ def lerArquivo(nome):
 
     else:
         print(a.read())
+
